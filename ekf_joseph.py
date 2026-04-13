@@ -1,13 +1,5 @@
-# AER1513 - Assignment 2 (Q4 + Q5)
 # Extended Kalman Filter for "Lost in the Woods" dataset
 # Single-file implementation: numpy arrays only; matplotlib for plots & animation.
-# DELIVERABLES:
-#   - Q4(a): 9 PNG plots (r_max = 5, 3, 1 for x/y/theta)
-#   - Q4(b): 9 PNG plots with poor init (suffix "_badinit")
-#   - Q4(c): 9 PNG plots with CRLB-style linearization (suffix "_crlb")
-#   - Q5   : MP4 animation for r_max=1 (ffmpeg only)
-#
-# IMPORTANT FIX for Q4(c):
 #   Jacobians F, G, H are evaluated at the ground-truth state,
 #   BUT the predicted measurement y_hat is ALWAYS evaluated at the current predicted state.
 #   This preserves informative innovations in the "CRLB" reference run.
