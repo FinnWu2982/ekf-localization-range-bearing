@@ -288,7 +288,7 @@ def run_ekf(r_max_list, x0, P0, linearize_at="estimate", suffix="", save_prefix=
     return results
 
 # =============================================================================
-# Q4(a): good initial condition
+# good initial condition
 # =============================================================================
 x0_good = np.array([x_true[0], y_true[0], th_true[0]], dtype=float)
 P0_good = np.diag([1.0, 1.0, 0.1])
@@ -299,7 +299,7 @@ if RUN_Q4A:
                            linearize_at="estimate", suffix="", save_prefix="")
 
 # =============================================================================
-# Q4(b): poor initial condition
+# poor initial condition
 # =============================================================================
 if RUN_Q4B_POOR:
     x0_bad = np.array([1.0, 1.0, 0.1], dtype=float)  # per spec
@@ -307,14 +307,14 @@ if RUN_Q4B_POOR:
                 linearize_at="estimate", suffix="_badinit", save_prefix="")
 
 # =============================================================================
-# Q4(c): CRLB-style (Jacobians at truth; y_hat at predicted state)
+# CRLB-style (Jacobians at truth; y_hat at predicted state)
 # =============================================================================
 if RUN_Q4C_CRLB:
     _ = run_ekf(R_MAX_LIST, x0_good, P0_good,
                 linearize_at="truth", suffix="_crlb", save_prefix="")
 
 # =============================================================================
-# Q5: Animation for r_max = 1 (good init), colors per spec (MP4 via ffmpeg)
+# Animation for r_max = 1 (good init), colors per spec (MP4 via ffmpeg)
 # =============================================================================
 if RUN_Q5_ANIM:
     # Ensure we have the Q4(a) result for r_max=1
