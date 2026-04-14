@@ -26,10 +26,10 @@ The script supports several experiment settings:
 ## Figures
 
 ### EKF Animation: Initialization
-![EKF Initialization](Figures/ekf_animation1.png)
+![EKF Initialization](Figures/EKF_animation1.png)
 
 ### EKF Animation: Estimated and Ground-Truth Trajectories
-![EKF Tracking](Figures/ekf_animation2.png)
+![EKF Tracking](Figures/EKF_animation2.png)
 
 ## Files
 - `ekf_joseph.py`: main EKF implementation
